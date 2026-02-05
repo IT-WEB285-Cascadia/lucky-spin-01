@@ -31,7 +31,7 @@ namespace LuckySpin.Controllers
 
           }
             //DONE: Modify this to use the string builder's response string as the Content property's value
-            return new ContentResult { Content = $"We're Ready to Spin with Lucky Number {luck}" + htmlToShow.ToString(), ContentType = "text/html"};
+            return new ContentResult { Content = $"Lucky Number {luck}" + htmlToShow.ToString(), ContentType = "text/html"};
         }
     }
 }
