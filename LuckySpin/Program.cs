@@ -33,7 +33,7 @@ app.MapControllerRoute(
     {
         controller = "Spinner",
         action = "Index",
-        luck = 7
+        luck = "luck"
     });
 
 app.Run();
