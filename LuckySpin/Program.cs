@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-
-var builder = WebApplication.CreateBuilder(args);
+﻿var builder = WebApplication.CreateBuilder(args);
 
 // Install Services using the builder.Services methods
-  //  DONE: include the builder service "AddControllers" to enable MVC controllers
-builder.Services.AddControllers();
+  //  TODO: include the builder service "AddControllers" to enable MVC controllers
+
 
 //Builds the app with the added services
 var app = builder.Build();
@@ -19,8 +16,8 @@ app.UseStaticFiles();
 if (!app.Environment.IsDevelopment()) {
     app.UseExceptionHandler("/Spinner/Error");
 }
-//   DONE: include the app method "UseRouting" to recognize custom "Routes" in place of folders and files
-app.UseRouting();
+//   TODO: include the app method "UseRouting" to recognize custom "Routes" in place of folders and files
+
 
 
 //Configure Routing with a general pattern and a default setting if the URL path is left out
@@ -33,7 +30,8 @@ app.MapControllerRoute(
     {
         controller = "Spinner",
         action = "Index",
-        luck = "luck"
+        luck = 7
     });
 
 app.Run();
+
